@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/challenge-github-user-search/static/css/main.073c9b0a.css",
+    "main.js": "/challenge-github-user-search/static/js/main.e115fc29.js",
+    "index.html": "/challenge-github-user-search/index.html",
+    "main.073c9b0a.css.map": "/challenge-github-user-search/static/css/main.073c9b0a.css.map",
+    "main.e115fc29.js.map": "/challenge-github-user-search/static/js/main.e115fc29.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.e115fc29.js"
+  ]
+}

@@ -1,0 +1,23 @@
+@use "styles/variables";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  min-height: 100vh;
+  background-color: variables.$color-bg-dark;
+  font-family: "Space Mono", monospace;
+  display: grid;
+  place-items: center;
+  color: variables.$color-font-dark;
+}

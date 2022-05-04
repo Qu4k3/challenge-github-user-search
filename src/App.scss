@@ -1,0 +1,44 @@
+@use 'styles/variables';
+
+.app {
+  max-width: 680px;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+
+  .block {
+    background-color: variables.$color-card-dark;
+    padding: 40px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+
+    .user-info {
+      display: flex;
+      gap: 40px;
+      .avatar {
+        width: 120px;
+        height: 120px;
+        border-radius: 100%;
+      }
+      a {
+        color: variables.$color-active;
+        text-decoration: none;
+      }
+      .user-profile {
+        p {
+          margin-top: 20px; 
+          font-size: 14px;         
+        }
+      }
+    }
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}

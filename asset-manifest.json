@@ -1,13 +1,20 @@
 {
   "files": {
-    "main.css": "/challenge-github-user-search/static/css/main.073c9b0a.css",
-    "main.js": "/challenge-github-user-search/static/js/main.e115fc29.js",
+    "main.css": "/challenge-github-user-search/static/css/main.1bc57a3f.css",
+    "main.js": "/challenge-github-user-search/static/js/main.d09eaa99.js",
+    "static/media/icon-sun.svg": "/challenge-github-user-search/static/media/icon-sun.47125049fc744eac572acdbfbd2c65ab.svg",
+    "static/media/icon-website.svg": "/challenge-github-user-search/static/media/icon-website.0bc450789e60669c8668a0968639c186.svg",
+    "static/media/icon-company.svg": "/challenge-github-user-search/static/media/icon-company.31d48a67f7e369bd86a4b3f7437adc04.svg",
     "index.html": "/challenge-github-user-search/index.html",
-    "main.073c9b0a.css.map": "/challenge-github-user-search/static/css/main.073c9b0a.css.map",
-    "main.e115fc29.js.map": "/challenge-github-user-search/static/js/main.e115fc29.js.map"
+    "static/media/icon-twitter.svg": "/challenge-github-user-search/static/media/icon-twitter.e8ee1e50b84959e4d19221e024eb55a7.svg",
+    "static/media/icon-moon.svg": "/challenge-github-user-search/static/media/icon-moon.d1431694d6b988b9eba98ac2c39d31da.svg",
+    "static/media/icon-search.svg": "/challenge-github-user-search/static/media/icon-search.0cc0c98424cc75d5e1dfbb9e3abb6785.svg",
+    "static/media/icon-location.svg": "/challenge-github-user-search/static/media/icon-location.2015e0f6b68d5f3f53b1f88a15c18c4c.svg",
+    "main.1bc57a3f.css.map": "/challenge-github-user-search/static/css/main.1bc57a3f.css.map",
+    "main.d09eaa99.js.map": "/challenge-github-user-search/static/js/main.d09eaa99.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.e115fc29.js"
+    "static/css/main.1bc57a3f.css",
+    "static/js/main.d09eaa99.js"
   ]
 }

@@ -1,44 +1,188 @@
 @use 'styles/variables';
 
 .app {
-  max-width: 680px;
+  width: 720px;
 
   .header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+
+    h1 {
+      font-size: 32px;
+    }
+
+    button {
+      font-family: variables.$ff-space-mono;
+      text-transform: uppercase;
+      background: none;
+      border: none;
+      color: variables.$clr-white;
+      font-size: 16px;
+      display: flex;
+      gap: 15px;
+      align-items: center;
+
+      svg {
+        fill: variables.$clr-white;
+      }
+      
+      &:hover {
+        color: variables.$clr-grayish-blue;
+        cursor: pointer;
+
+        svg {
+          fill: variables.$clr-grayish-blue;
+        }
+      }
+    }
+  }
+
+  .search {
+    form {
+      position: relative;
+      input {
+        width: 100%;
+        height: 60px;
+        box-sizing: border-box;
+        padding-left: 80px;
+        padding-right: 120px;
+        background-color: variables.$clr-dark-desaturated-blue;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        border: none;
+        color: variables.$clr-white;
+        font-size: 18px;
+
+        &::placeholder{
+          color: variables.$clr-saturated-white;
+        }
+      }
+
+      svg {
+        position: absolute;
+        top: 30px;
+        transform: translateY(-50%);
+        left: 30px;
+      }
+
+      .error {
+        color: variables.$clr-error;
+        position: absolute;
+        text-align: right;
+        right: 120px;
+        top: 30px;
+        transform: translateY(-50%);
+      }
+
+      button {
+        position: absolute;
+        font-family: variables.$ff-space-mono;
+        top: 30px;
+        transform: translateY(-50%);
+        right: 8px;
+        background-color: variables.$clr-active;
+        border: none;
+        color: variables.$clr-white;
+        padding: 10px 15px;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: .3s;
+
+        &:hover {
+          background-color: variables.$clr-hover-blue;
+        }
+      }
+    }
   }
 
   .block {
-    background-color: variables.$color-card-dark;
-    padding: 40px;
+    background-color: variables.$clr-dark-desaturated-blue;
+    padding: 30px;
     margin-bottom: 20px;
     border-radius: 10px;
 
     .user-info {
       display: flex;
-      gap: 40px;
+      gap: 30px;
       .avatar {
         width: 120px;
         height: 120px;
         border-radius: 100%;
       }
       a {
-        color: variables.$color-active;
+        color: variables.$clr-active;
         text-decoration: none;
       }
       .user-profile {
-        p {
-          margin-top: 20px; 
-          font-size: 14px;         
+        width: 100%;
+        display: flex;
+        flex-direction: column;  
+        gap: 30px;
+
+        .user-data {
+          display: flex;
+          justify-content: space-between;
+          gap: 20px;
+
+          & > div {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+          }
+
+          & > p {
+            text-wrap: nowrap;
+          }
         }
       }
     }
-  }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    .user-repos {
+      display: flex;
+      background-color: variables.$clr-very-dark-blue;
+      padding: 20px 30px;
+      border-radius: 15px;
+      justify-content: space-between;
+
+      p {
+        font-size: 24px;
+        font-weight: 900;
+      }
+    }
+
+    .user-social {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+
+      > div {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+
+        svg {
+          fill: variables.$clr-white;
+        }
+
+        a {
+          color: variables.$clr-white;
+          transition: .3s;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .not-available {
+      color: variables.$clr-grayish-blue;
+      svg {
+        fill: variables.$clr-grayish-blue !important;
+      }
+    }
   }
 }

@@ -1,8 +1,23 @@
-$color-font: #4e689a;
-$color-font-alt: #242932;
-$color-font-dark: #ffffff;
-$color-card: #fefefe;
-$color-card-dark: #1f2a48;
-$color-bg: #f5f8ff;
-$color-bg-dark: #141c2f;
-$color-active: #0079fe;
+// Colors Primary
+$clr-active: hsl(212, 100%, 50%);
+$clr-error: hsl(0, 91%, 62%);
+$clr-white: hsl(0, 0%, 100%);
+
+// Colors Light Mode
+$clr-grayish-blue: hsl(217, 20%, 51%);
+$clr-desautareted-blue: hsl(217, 35%, 45%);
+$clr-dark-blue: hsl(217, 21%, 21%);
+$clr-saturated-white: hsl(227, 100%, 98%);
+
+// Colors Dark Mode
+$clr-very-dark-blue: hsl(220, 40%, 13%);
+$clr-dark-desaturated-blue: hsl(222, 41%, 20%);
+
+// Hover
+$clr-hover-blue: hsl(212, 100%, 69%);
+
+// Shadow
+$sh-box: 0px 16px 30px -10px rgba(70, 96, 187, 0.1986);
+
+// Font Family
+$ff-space-mono: "Space Mono", monospace;

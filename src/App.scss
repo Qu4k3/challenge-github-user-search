@@ -17,22 +17,22 @@
       text-transform: uppercase;
       background: none;
       border: none;
-      color: variables.$clr-white;
+      color: var(--text-color);
       font-size: 16px;
       display: flex;
       gap: 15px;
       align-items: center;
 
       svg {
-        fill: variables.$clr-white;
+        fill: var(--text-color);
       }
       
       &:hover {
-        color: variables.$clr-grayish-blue;
+        color: var(--text-links-inactive);
         cursor: pointer;
 
         svg {
-          fill: variables.$clr-grayish-blue;
+          fill: var(--text-links-inactive);
         }
       }
     }
@@ -47,15 +47,15 @@
         box-sizing: border-box;
         padding-left: 80px;
         padding-right: 120px;
-        background-color: variables.$clr-dark-desaturated-blue;
+        background-color: var(--bg-box-color);
         margin-bottom: 20px;
         border-radius: 10px;
         border: none;
-        color: variables.$clr-white;
+        color: var(--text-color);
         font-size: 18px;
 
         &::placeholder{
-          color: variables.$clr-saturated-white;
+          color: var(--text-color);
         }
       }
 
@@ -99,7 +99,7 @@
   }
 
   .block {
-    background-color: variables.$clr-dark-desaturated-blue;
+    background-color: var(--bg-box-color);
     padding: 30px;
     margin-bottom: 20px;
     border-radius: 10px;
@@ -142,7 +142,7 @@
 
     .user-repos {
       display: flex;
-      background-color: variables.$clr-very-dark-blue;
+      background-color: var(--bg-color);
       padding: 20px 30px;
       border-radius: 15px;
       justify-content: space-between;
@@ -164,11 +164,11 @@
         gap: 20px;
 
         svg {
-          fill: variables.$clr-white;
+          fill: var(--text-color);
         }
 
         a {
-          color: variables.$clr-white;
+          color: var(--text-color);
           transition: .3s;
 
           &:hover {
@@ -179,9 +179,9 @@
     }
 
     .not-available {
-      color: variables.$clr-grayish-blue;
+      color: var(--text-links-inactive);
       svg {
-        fill: variables.$clr-grayish-blue !important;
+        fill: var(--text-links-inactive) !important;
       }
     }
   }

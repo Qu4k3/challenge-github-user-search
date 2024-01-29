@@ -12,6 +12,7 @@ import './App.scss';
 function App() {
 
   const [error, setError] = useState(null);
+  const [isDarkMode, setIsDarkMode] = useState();
   const [username, setUsername] = useState('');
   const [userData, setUserData] = useState({
     "login": "octocat",
@@ -65,12 +66,42 @@ function App() {
     }
   };
 
+  const handleSwitch = () => {
+    setIsDarkMode(!isDarkMode);
+    document.documentElement.setAttribute(
+      "data-theme",
+      isDarkMode ? "dark" : "light"
+    );
+    localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+  };
+
+  const checkLocalStorageSetState = () => {
+    let theme = localStorage.getItem("theme");
+
+    if (
+      theme == "dark" ||
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      setIsDarkMode(true);
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+
+    if (theme == "light") {
+      setIsDarkMode(false);
+      document.documentElement.setAttribute("data-theme", "light");
+    }
+  };
+
+  useEffect(() => {
+    checkLocalStorageSetState();
+  }, []);
+
   return (
     <div className="app">
 
       <div className="header">
         <h1>devfinder</h1>
-        <button type="button">Light <SunSvg /></button>
+        <button onClick={handleSwitch} type="button">{isDarkMode ? <>Light <SunSvg /></> : <>Dark <MoonSvg /></>}</button>
       </div>
 
       <div className="search">

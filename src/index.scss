@@ -1,5 +1,41 @@
 @use "styles/variables";
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-color: variables.$clr-white;
+    --bg-box-color: variables.$clr-saturated-white;
+    --text-color: variables.$clr-dark-blue;
+    --text-links-active: variables.$clr-desautareted-blue;
+    --text-links-inactive: variables.$clr-grayish-blue;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: variables.$clr-very-dark-blue;
+    --bg-box-color: variables.$clr-dark-desaturated-blue;
+    --text-color: variables.$clr-white;
+    --text-links-active: variables.$clr-grayish-blue;
+    --text-links-inactive: variables.$clr-desautareted-blue;
+  }
+}
+
+[data-theme="light"] {
+  --bg-color: variables.$clr-white;
+  --bg-box-color: variables.$clr-saturated-white;
+  --text-color: variables.$clr-dark-blue;
+  --text-links-active: variables.$clr-desautareted-blue;
+  --text-links-inactive: variables.$clr-grayish-blue;
+}
+
+[data-theme="dark"] {
+  --bg-color: variables.$clr-very-dark-blue;
+  --bg-box-color: variables.$clr-dark-desaturated-blue;
+  --text-color: variables.$clr-white;
+  --text-links-active: variables.$clr-grayish-blue;
+  --text-links-inactive: variables.$clr-desautareted-blue;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -16,8 +52,8 @@ body {
   vertical-align: baseline;
   background: transparent;
   min-height: 100vh;
-  background-color: variables.$clr-very-dark-blue;
+  background-color: var(--bg-color);
   display: grid;
   place-items: center;
-  color: variables.$clr-white;
+  color: var(--text-color);
 }

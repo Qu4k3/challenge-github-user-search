@@ -1,5 +1,5 @@
 # Frontend Mentor Challenge
 
-This project comes from [Interactive pricing component](https://www.frontendmentor.io/challenges/interactive-pricing-component-t0m8PIyY8).
+This project comes from [GitHub user search app](https://www.frontendmentor.io/challenges/github-user-search-app-Q09YOgaH6).
 
-![preview](/starter_files/design/desktop.jpg "Interactive pricing component")
+![preview](/starter_files/design/desktop.jpg "GitHub user search app")

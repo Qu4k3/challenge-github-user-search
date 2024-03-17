@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import { ReactComponent as LocationSvg } from './assets/icon-location.svg';
-import { ReactComponent as CompanySvg } from './assets/icon-company.svg';
-import { ReactComponent as TwitterSvg } from './assets/icon-twitter.svg';
-import { ReactComponent as WebsiteSvg } from './assets/icon-website.svg';
-import { ReactComponent as SearchIconSvg } from './assets/icon-search.svg';
-import { ReactComponent as MoonSvg } from './assets/icon-moon.svg';
-import { ReactComponent as SunSvg } from './assets/icon-sun.svg';
+import LocationSvg from './assets/icon-location.svg?react';
+import CompanySvg from './assets/icon-company.svg?react';
+import TwitterSvg from './assets/icon-twitter.svg?react';
+import WebsiteSvg from './assets/icon-website.svg?react';
+import SearchIconSvg from './assets/icon-search.svg?react';
+import MoonSvg from './assets/icon-moon.svg?react';
+import SunSvg from './assets/icon-sun.svg?react';
 import userPlaceholder from './assets/image-user-placeholder.png';
 import './App.scss';
 
@@ -79,14 +79,14 @@ function App() {
     let theme = localStorage.getItem("theme");
 
     if (
-      theme == "dark" ||
+      theme === "dark" ||
       window.matchMedia("(prefers-color-scheme: dark)").matches
     ) {
       setIsDarkMode(true);
       document.documentElement.setAttribute("data-theme", "dark");
     }
 
-    if (theme == "light") {
+    if (theme === "light") {
       setIsDarkMode(false);
       document.documentElement.setAttribute("data-theme", "light");
     }

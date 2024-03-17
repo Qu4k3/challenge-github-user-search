@@ -1,45 +1,60 @@
-@use "styles/variables";
+@use "styles/variables" as v;
+
+:root {
+  font-family: v.$ff-space-mono;
+  line-height: 1.5;
+  font-weight: 400;
+
+  //color-scheme: light dark;
+  //color: rgba(255, 255, 255, 0.87);
+ // background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 @media (prefers-color-scheme: light) {
   :root {
-    --bg-color: variables.$clr-white;
-    --bg-box-color: variables.$clr-saturated-white;
-    --text-color: variables.$clr-dark-blue;
-    --text-links-active: variables.$clr-desautareted-blue;
-    --text-links-inactive: variables.$clr-grayish-blue;
+    --bg-color: v.$clr-saturated-white;
+    --bg-box-color: v.$clr-white;
+    --text-color: v.$clr-dark-blue;
+    --text-links-active: v.$clr-desautareted-blue;
+    --text-links-inactive: v.$clr-grayish-blue;
   }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-color: variables.$clr-very-dark-blue;
-    --bg-box-color: variables.$clr-dark-desaturated-blue;
-    --text-color: variables.$clr-white;
-    --text-links-active: variables.$clr-grayish-blue;
-    --text-links-inactive: variables.$clr-desautareted-blue;
+    --bg-color: v.$clr-very-dark-blue;
+    --bg-box-color: v.$clr-dark-desaturated-blue;
+    --text-color: v.$clr-white;
+    --text-links-active: v.$clr-grayish-blue;
+    --text-links-inactive: v.$clr-desautareted-blue;
   }
 }
 
 [data-theme="light"] {
-  --bg-color: variables.$clr-white;
-  --bg-box-color: variables.$clr-saturated-white;
-  --text-color: variables.$clr-dark-blue;
-  --text-links-active: variables.$clr-desautareted-blue;
-  --text-links-inactive: variables.$clr-grayish-blue;
+  --bg-color: v.$clr-saturated-white;
+  --bg-box-color: v.$clr-white;
+  --text-color: v.$clr-dark-blue;
+  --text-links-active: v.$clr-desautareted-blue;
+  --text-links-inactive: v.$clr-grayish-blue;
 }
 
 [data-theme="dark"] {
-  --bg-color: variables.$clr-very-dark-blue;
-  --bg-box-color: variables.$clr-dark-desaturated-blue;
-  --text-color: variables.$clr-white;
-  --text-links-active: variables.$clr-grayish-blue;
-  --text-links-inactive: variables.$clr-desautareted-blue;
+  --bg-color: v.$clr-very-dark-blue;
+  --bg-box-color: v.$clr-dark-desaturated-blue;
+  --text-color: v.$clr-white;
+  --text-links-active: v.$clr-grayish-blue;
+  --text-links-inactive: v.$clr-desautareted-blue;
 }
 
 * {
   margin: 0;
   padding: 0;
-  font-family: variables.$ff-space-mono;
+  font-family: v.$ff-space-mono;
 }
 
 html,

@@ -1,4 +1,11 @@
-@use 'styles/variables';
+@use 'styles/variables' as v;
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
 
 .app {
   width: 720px;
@@ -13,7 +20,7 @@
     }
 
     button {
-      font-family: variables.$ff-space-mono;
+      font-family: v.$ff-space-mono;
       text-transform: uppercase;
       background: none;
       border: none;
@@ -67,7 +74,7 @@
       }
 
       .error {
-        color: variables.$clr-error;
+        color: v.$clr-error;
         position: absolute;
         text-align: right;
         right: 120px;
@@ -77,13 +84,13 @@
 
       button {
         position: absolute;
-        font-family: variables.$ff-space-mono;
+        font-family: v.$ff-space-mono;
         top: 30px;
         transform: translateY(-50%);
         right: 8px;
-        background-color: variables.$clr-active;
+        background-color: v.$clr-active;
         border: none;
-        color: variables.$clr-white;
+        color: v.$clr-white;
         padding: 10px 15px;
         border-radius: 10px;
         font-size: 16px;
@@ -92,7 +99,7 @@
         transition: .3s;
 
         &:hover {
-          background-color: variables.$clr-hover-blue;
+          background-color: v.$clr-hover-blue;
         }
       }
     }
@@ -113,7 +120,7 @@
         border-radius: 100%;
       }
       a {
-        color: variables.$clr-active;
+        color: v.$clr-active;
         text-decoration: none;
       }
       .user-profile {

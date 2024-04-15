@@ -8,7 +8,7 @@
 }
 
 .app {
-  width: 720px;
+  min-width: 720px;
 
   .header {
     display: flex;
@@ -17,6 +17,8 @@
 
     h1 {
       font-size: 32px;
+      color: var(--text-default);
+      font-weight: 700;
     }
 
     button {
@@ -24,14 +26,14 @@
       text-transform: uppercase;
       background: none;
       border: none;
-      color: var(--text-color);
-      font-size: 16px;
+      color: var(--text-default);
+      font-size: 15px;
       display: flex;
       gap: 15px;
       align-items: center;
 
       svg {
-        fill: var(--text-color);
+        fill: var(--text-default);
       }
       
       &:hover {
@@ -58,11 +60,12 @@
         margin-bottom: 20px;
         border-radius: 10px;
         border: none;
-        color: var(--text-color);
+        color: var(--text-default);
         font-size: 18px;
+        box-shadow: var(--shadow);
 
         &::placeholder{
-          color: var(--text-color);
+          color: var(--text-default);
         }
       }
 
@@ -91,7 +94,7 @@
         background-color: v.$clr-active;
         border: none;
         color: v.$clr-white;
-        padding: 10px 15px;
+        padding: 10px 12px;
         border-radius: 10px;
         font-size: 16px;
         font-weight: 700;
@@ -110,6 +113,7 @@
     padding: 30px;
     margin-bottom: 20px;
     border-radius: 10px;
+    box-shadow: var(--shadow);
 
     .user-info {
       display: flex;
@@ -131,17 +135,30 @@
 
         .user-data {
           display: flex;
-          justify-content: space-between;
+          flex-direction: column;
+          align-items: flex-start;
           gap: 20px;
+
+          h2 {
+            color: var(--text-contrast);
+          }
 
           & > div {
             display: flex;
-            flex-direction: column;
             gap: 20px;
+            justify-content: space-between;
+            text-align: left;
+            width: 100%;
           }
 
           & > p {
             text-wrap: nowrap;
+            text-align: right;
+          }
+
+          .user-bio {
+            color: var(--text-default);
+            opacity: .8;
           }
         }
       }
@@ -153,10 +170,13 @@
       padding: 20px 30px;
       border-radius: 15px;
       justify-content: space-between;
+      font-size: 18px;
 
       p {
-        font-size: 24px;
+        font-size: 21px;
         font-weight: 900;
+        text-align: left;
+        color: var(--text-contrast);
       }
     }
 
@@ -171,12 +191,11 @@
         gap: 20px;
 
         svg {
-          fill: var(--text-color);
+          fill: var(--icon-color);
         }
 
         a {
-          color: var(--text-color);
-          transition: .3s;
+          color: var(--text-links-active);
 
           &:hover {
             text-decoration: underline;
@@ -187,9 +206,28 @@
 
     .not-available {
       color: var(--text-links-inactive);
-      svg {
-        fill: var(--text-links-inactive) !important;
-      }
     }
+  }
+}
+
+@media (max-width: 800px) {
+  .app {
+    min-width: auto;
+  }
+  .user-info {
+    flex-direction: column;
+  }
+
+  .user-data {
+    & > div {
+      gap: 10px !important;
+      flex-direction: column;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .user-social {
+    grid-template-columns: repeat(1, 1fr) !important;
   }
 }

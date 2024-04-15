@@ -42,6 +42,13 @@ function App() {
     return formatedDate;
   }
 
+  function getDomainWithoutProtocol(url) {
+    var domain = url.replace(/^https?:\/\//, '');
+    domain = domain.split('/')[0];
+
+    return domain;
+  }
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -70,9 +77,9 @@ function App() {
     setIsDarkMode(!isDarkMode);
     document.documentElement.setAttribute(
       "data-theme",
-      isDarkMode ? "dark" : "light"
+      isDarkMode ? "light" : "dark"
     );
-    localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+    localStorage.setItem("theme", isDarkMode ? "light" : "dark");
   };
 
   const checkLocalStorageSetState = () => {
@@ -132,9 +139,9 @@ function App() {
                   <h2>{userData.name}</h2>
                   <a href={userData.html_url}>@{userData.login}</a>
                 </div>
-                <p>{userData.bio ? userData.bio : 'This profile has no bio'}</p>
+                <p>Joined {dateFormat(userData.created_at)}</p>
               </div>
-              <p>Joined {dateFormat(userData.created_at)}</p>
+              <p className="user-bio">{userData.bio ? userData.bio : 'This profile has no bio'}</p>
             </div>
 
             <div className="user-repos">
@@ -173,7 +180,7 @@ function App() {
                 <span><WebsiteSvg /></span>
                 <span>
                   {userData.blog
-                    ? <a href={userData.blog}>{userData.blog}</a>
+                    ? <a href={userData.blog}>{getDomainWithoutProtocol(userData.blog)}</a>
                     : "Not Available"}
                 </span>
               </div>

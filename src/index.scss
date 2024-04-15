@@ -7,7 +7,7 @@
 
   //color-scheme: light dark;
   //color: rgba(255, 255, 255, 0.87);
- // background-color: #242424;
+  // background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -17,38 +17,48 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --bg-color: v.$clr-saturated-white;
-    --bg-box-color: v.$clr-white;
-    --text-color: v.$clr-dark-blue;
-    --text-links-active: v.$clr-desautareted-blue;
-    --text-links-inactive: v.$clr-grayish-blue;
+    --bg-color: #{v.$clr-saturated-white};
+    --bg-box-color: #{v.$clr-white};
+    --text-default: #{v.$clr-desautareted-blue};
+    --text-contrast: #{v.$clr-dark-blue};
+    --text-links-active: #{v.$clr-desautareted-blue};
+    --text-links-inactive: #{v.$clr-grayish-blue};
+    --icon-color: #{v.$clr-desautareted-blue};
+    --shadow: #{v.$sh-box};
   }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-color: v.$clr-very-dark-blue;
-    --bg-box-color: v.$clr-dark-desaturated-blue;
-    --text-color: v.$clr-white;
-    --text-links-active: v.$clr-grayish-blue;
-    --text-links-inactive: v.$clr-desautareted-blue;
+    --bg-color: #{v.$clr-very-dark-blue};
+    --bg-box-color: #{v.$clr-dark-desaturated-blue};
+    --text-default: #{v.$clr-white};
+    --text-links-active: #{v.$clr-white};
+    --text-links-inactive: #{v.$clr-grayish-blue};
+    --icon-color: #{v.$clr-desautareted-blue};
+    --shadow: none;
   }
 }
 
 [data-theme="light"] {
-  --bg-color: v.$clr-saturated-white;
-  --bg-box-color: v.$clr-white;
-  --text-color: v.$clr-dark-blue;
-  --text-links-active: v.$clr-desautareted-blue;
-  --text-links-inactive: v.$clr-grayish-blue;
+  --bg-color: #{v.$clr-saturated-white};
+  --bg-box-color: #{v.$clr-white};
+  --text-default: #{v.$clr-desautareted-blue};
+  --text-contrast: #{v.$clr-dark-blue};
+  --text-links-active: #{v.$clr-desautareted-blue};
+  --text-links-inactive: #{v.$clr-grayish-blue};
+  --icon-color: #{v.$clr-desautareted-blue};
+  --shadow: #{v.$sh-box};
 }
 
 [data-theme="dark"] {
-  --bg-color: v.$clr-very-dark-blue;
-  --bg-box-color: v.$clr-dark-desaturated-blue;
-  --text-color: v.$clr-white;
-  --text-links-active: v.$clr-grayish-blue;
-  --text-links-inactive: v.$clr-desautareted-blue;
+  --bg-color: #{v.$clr-very-dark-blue};
+  --bg-box-color: #{v.$clr-dark-desaturated-blue};
+  --text-default: #{v.$clr-white};
+  --text-links-active: #{v.$clr-white};
+  --text-links-inactive: #{v.$clr-grayish-blue};
+  --icon-color: #{v.$clr-desautareted-blue};
+  --shadow: none;
 }
 
 * {
@@ -70,5 +80,5 @@ body {
   background-color: var(--bg-color);
   display: grid;
   place-items: center;
-  color: var(--text-color);
+  color: var(--text-default);
 }

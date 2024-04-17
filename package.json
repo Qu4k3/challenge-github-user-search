@@ -1,7 +1,6 @@
 {
   "name": "challenge-github-user-search",
   "homepage": "https://qu4k3.github.io/challenge-github-user-search/",
-
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,23 +9,23 @@
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "deploy": "npm run build && gh-pages -d dist"
+    "deploy": "vite build && gh-pages -d dist"
   },
   "dependencies": {
-    "@fontsource/space-mono": "^5.0.19",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "@fontsource/space-mono": "5.0.19",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@types/react": "^18.2.78",
-    "@types/react-dom": "^18.2.25",
-    "@vitejs/plugin-react": "^4.2.1",
-    "eslint": "^9.0.0",
-    "eslint-plugin-react": "^7.34.1",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.6",
-    "gh-pages": "^6.1.1",
-    "vite": "^5.2.8",
-    "vite-plugin-svgr": "^4.2.0"
+    "@types/react": "18.2.79",
+    "@types/react-dom": "18.2.25",
+    "@vitejs/plugin-react": "4.2.1",
+    "eslint": "8.57.0",
+    "eslint-plugin-react": "7.34.1",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "eslint-plugin-react-refresh": "0.4.6",
+    "gh-pages": "6.1.1",
+    "vite": "5.2.9",
+    "vite-plugin-svgr": "4.2.0"
   }
 }

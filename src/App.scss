@@ -118,6 +118,7 @@
     .user-info {
       display: flex;
       gap: 30px;
+      position: relative;
       .avatar {
         width: 120px;
         height: 120px;
@@ -212,7 +213,7 @@
 
 @media (max-width: 800px) {
   .app {
-    min-width: auto;
+    min-width: 500px;
   }
   .user-info {
     flex-direction: column;
@@ -222,11 +223,18 @@
     & > div {
       gap: 10px !important;
       flex-direction: column;
+      position: absolute;
+      top: 0;
+      right: 0;
+      max-width: calc(100% - 120px - 30px);
     }
   }
 }
 
 @media (max-width: 576px) {
+  .app {
+    min-width: auto;
+  }
   .user-social {
     grid-template-columns: repeat(1, 1fr) !important;
   }
